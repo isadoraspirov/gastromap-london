@@ -1,1 +1,1 @@
-# gastronomy-london
+# gastromap-london
