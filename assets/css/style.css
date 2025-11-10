@@ -3,22 +3,63 @@
 
 /* CSS Variables */
 :root {
-    --primary-font: "OpenSans", sans-serif;
-    --secondary-font: "Montserrat", Arial, sans-serif;
-    --color-primary: #14213D;     /* Oxford Blue */
-    --color-accent: #BA181B;      /* London Red */
-    --color-secondary: #E5E5E5;   /* Stone Grey */
-    --color-highlight: #FCA311;   /* Gold Beige */
-    --color-text: #333333;        /* Charcoal */
-    --color-background: #F9FAFB;  /* White Smoke */
+  --primary-font: "OpenSans", sans-serif;
+  --secondary-font: "Montserrat", Arial, sans-serif;
+  --color-primary: #14213d; /* Oxford Blue */
+  /*--color-accent: #BA181B;      /* London Red */
+  --color-accent: #fd7555;
+  --color-secondary: #e5e5e5; /* Stone Grey */
+  --color-highlight: #fca311; /* Gold Beige */
+  --color-text: #333333; /* Charcoal */
+  --color-background: #f9fafb; /* White Smoke */
 }
 
 /* Navbar */
 
 #navbar {
-    background-color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
 #navbar .logo {
-    width: 40px;
+  width: 50px;
+}
+
+/* Main Content */
+main {
+    flex: 1 0 auto;
+    margin-top: 47px;
+}
+
+/* Hero Section */
+
+.hero-header {
+  height: 100vh; /* full viewport height */
+  width: 100%;
+  background-image: url("../images/img-hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+
+.custom-button-filled {
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+/* Header */
+
+h1 {
+  margin-top: 100px;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
 }
