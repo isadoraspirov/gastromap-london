@@ -87,7 +87,9 @@
     </nav>
 
     <header class="hero-header">
-      <img src="assets/images/img_hero.webp" alt="Hero" class="hero-img" />
+      <div class="hero-image-wrapper">
+        <img src="assets/images/img_hero.webp" alt="Hero" class="hero-img" />
+      </div>
       <div class="container text-center text-white">
         <a href="#" class="btn btn-sm custom-button-filled mt-4">Explore Now</a>
       </div>
@@ -95,59 +97,120 @@
 
     <!-- About Section -->
 
-    <section id="about" class="container-section py-5">
-      <div class="container">
-        <div class="row position-relative">
-          <div class="col-12 col-xl-6">
-            <div class="about-header">
-              <h1>About</h1>
-              <p class="my-4">
-                Find the most loved spots by locals and tourists alike.
+    <section id="about" class="container my-5">
+      <h2 class="mb-4">ABOUT</h2>
+      <p class="text-muted mb-5">
+        Find the most loved spots by locals and tourists alike.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <div class="card-body">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <h5 class="card-title">Discover</h5>
+              <p class="card-text">
+                Explore London’s hidden gems and most popular restaurants in one
+                interactive map.
               </p>
             </div>
+          </div>
+        </div>
 
-            <!-- Cards Row -->
-            <div class="row g-3">
-              <div class="col-12 col-md-4">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card’s content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-4">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card’s content.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-4">
-                <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card’s content.
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <div class="card-body">
+              <i class="fa-solid fa-utensils"></i>
+              <h5 class="card-title">Taste</h5>
+              <p class="card-text">
+                From cozy cafés to fine dining, find authentic cuisine and the
+                best-rated dishes.
+              </p>
             </div>
-            <!-- End Cards Row -->
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card p-4 h-100 shadow-sm">
+            <div class="card-body">
+              <i class="fa-solid fa-heart"></i>
+              <h5 class="card-title">Enjoy</h5>
+              <p class="card-text">
+                Save your favourites, share your experiences, and fall in love
+                with London’s food scene.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="restaurants" class="container my-5">
+      <h2 class="mb-4">RESTAURANTS</h2>
+
+      <!-- Filter buttons -->
+      <div class="d-flex flex-wrap gap-2 mb-3">
+        <button
+          class="btn btn-outline-dark filter-btn active"
+          data-filter="all"
+        >
+          All
+        </button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="Italian">
+          Restaurant
+        </button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="Café">
+          Coffee Shop
+        </button>
+        <button class="btn btn-outline-dark filter-btn" data-filter="Pub">
+          Pub
+        </button>
+
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control ms-auto"
+          placeholder="Search restaurants..."
+          style="max-width: 250px"
+        />
+      </div>
+
+      <!-- Restaurant cards -->
+      <div id="restaurantList" class="row g-3">
+        <div class="col-md-4 restaurant-card" data-category="Italian">
+          <div class="card p-3 h-100">
+            <h5>Hélène Darroze at The Connaught</h5>
+            <p>Restaurant · ⭐ 4.5</p>
+            <button class="btn btn-light">View on Map</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 restaurant-card" data-category="Café">
+          <div class="card p-3 h-100">
+            <h5>Drury Covent Garden | Cafe & Brunch</h5>
+            <p>Coffee Shop · ⭐ 4.3</p>
+            <button class="btn btn-light">View on Map</button>
+          </div>
+        </div>
+
+        <div class="col-md-4 restaurant-card" data-category="Pub">
+          <div class="card p-3 h-100">
+            <h5>Old Shades</h5>
+            <p>Pub · ⭐ 4.8</p>
+            <button class="btn btn-light">View on Map</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+
+    <section id="map-section" class="container my-5">
+      <h2 class="mb-4">MAP</h2>
+      <div
+        id="map"
+        style="height: 500px; width: 100%; border: 1px solid #ccc"
+      ></div>
     </section>
 
     <!-- Bootstrap JS -->
@@ -187,5 +250,15 @@
           });
         });
     </script>
+
+    <!-- Google Maps SDK -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3oMfwzLnORwJF2aSrwo9ZteOO1OMcEo&callback=initMap&v=beta"
+      async
+    ></script>
+
+    <!-- Optional: other JS (filters, search) -->
+    <script src="assets/js/map.js"></script>
   </body>
 </html>
+

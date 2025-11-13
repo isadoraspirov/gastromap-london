@@ -25,19 +25,23 @@
 }
 
 /* Image Hero */
-
 .hero-header {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 50vh;
   margin-top: 76px;
   overflow: hidden;
+  background-color: var(--color-background); /* ✅ uses your variable */
 }
 
 .hero-header .hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* ✅ shows entire image */
+  object-position: center;
 }
+
+
 
 @media (max-width: 768px) {
   .hero-header {
