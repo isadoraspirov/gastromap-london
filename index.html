@@ -87,11 +87,68 @@
     </nav>
 
     <header class="hero-header">
-      <img src="assets/images/img_hero.webp" alt="Hero" class="hero-img">
+      <img src="assets/images/img_hero.webp" alt="Hero" class="hero-img" />
       <div class="container text-center text-white">
         <a href="#" class="btn btn-sm custom-button-filled mt-4">Explore Now</a>
       </div>
     </header>
+
+    <!-- About Section -->
+
+    <section id="about" class="container-section py-5">
+      <div class="container">
+        <div class="row position-relative">
+          <div class="col-12 col-xl-6">
+            <div class="about-header">
+              <h1>About</h1>
+              <p class="my-4">
+                Find the most loved spots by locals and tourists alike.
+              </p>
+            </div>
+
+            <!-- Cards Row -->
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card’s content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Cards Row -->
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script
@@ -99,5 +156,36 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Font Awesome kit -->
+
+    <script
+      src="https://kit.fontawesome.com/030b39ca87.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+
+    <script>
+      document
+        .querySelectorAll(".navbar-collapse .nav-link")
+        .forEach((link) => {
+          link.addEventListener("click", function (e) {
+            let section = document.querySelector(e.target.getAttribute("href"));
+            if (section) {
+              e.preventDefault(); // Prevent default anchor click behavior
+              let navbarHeight =
+                document.querySelector(".navbar-toggler").offsetHeight;
+              window.scroll({
+                top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                behavior: "smooth",
+              });
+              document
+                .querySelector(".navbar-collapse")
+                .classList.remove("show"); // Collapse navbar
+            }
+          });
+        });
+    </script>
   </body>
 </html>
