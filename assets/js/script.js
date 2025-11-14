@@ -21,7 +21,8 @@
     });
   });
 
-  // --- SEARCH ---
+  // Search 
+
   searchInput.addEventListener('keyup', () => {
     const query = searchInput.value.toLowerCase();
 
@@ -33,3 +34,22 @@
 
     filterButtons.forEach(btn => btn.classList.remove('active')); // clear filter highlight
   });
+
+  // View on Map
+
+  document.querySelectorAll('.view-map-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const index = btn.dataset.index;
+    const restaurant = window.restaurants[index];
+    const marker = window.mapMarkers[index];
+
+    // Center map
+    window.map.setCenter(restaurant.position);
+    window.map.setZoom(16);
+
+    // Open info window
+    new google.maps.InfoWindow({
+      content: `<strong>${restaurant.name}</strong>`
+    }).open(window.map, marker);
+  });
+});
