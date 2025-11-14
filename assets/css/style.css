@@ -25,44 +25,15 @@
 }
 
 /* Image Hero */
-.hero-header {
-  position: relative;
+
+main {
+  flex: 1 0 auto;
+  margin-top: 47px;
+}
+
+#hero {
+  height: 600px;
   width: 100%;
-  height: 50vh;
-  margin-top: 76px;
-  overflow: hidden;
-  background-color: var(--color-background); /* ✅ uses your variable */
-}
-
-.hero-header .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* ✅ shows entire image */
-  object-position: center;
-}
-
-
-
-@media (max-width: 768px) {
-  .hero-header {
-    aspect-ratio: auto;  /* let height shrink naturally */
-    max-height: 300px;
-  }
-
-  .hero-header .hero-img {
-    object-position: top center; /* focus on top part of image */
-  }
-}
-
-
-/* Buttons */
-
-.custom-button-filled {
-  border: 1px solid var(--color-accent);
-  background-color: var(--color-secondary);
-  color: var(--color-text);
-  font-family: var(--primary-font);
-  font-size: 1rem;
-  border-radius: 0;
+  background: url("../images/img_hero.webp") no-repeat center center/cover;
 }
 
