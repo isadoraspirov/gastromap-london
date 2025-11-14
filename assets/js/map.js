@@ -15,16 +15,19 @@ window.initMap = function () {
       name: "Hélène Darroze at The Connaught",
       category: "Restaurant",
       position: { lat: 51.51029, lng: -0.14975 },
+      image: "assets/images/helene-darroze.webp"
     },
     {
       name: "Drury Covent Garden | Cafe & Brunch",
       category: "Coffee Shop",
       position: { lat: 51.51624, lng: -0.12400 },
+      image: "assets/images/drury-coffee.webp"
     },
     {
       name: "Old Shades",
       category: "Pub",
       position: { lat: 51.50660, lng: -0.12698 },
+      image: "assets/images/oldshades-pub.webp"
     },
   ];
 
