@@ -34,6 +34,53 @@ main {
 #hero {
   height: 600px;
   width: 100%;
-  background: url("../images/img_hero.webp") no-repeat center center/cover;
+  background-color: var(--color-background);
 }
+
+/* About card */
+
+#about h2 {
+  font-size: 3rem;
+  font-family: var(--primary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+}
+
+#about p {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+}
+
+.about-card {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.about-card h5 {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary)
+
+}
+
+.about-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.4);
+}
+
+
+
+
 

@@ -41,7 +41,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
+
     <!-- Navbar -->
 
     <nav
@@ -49,7 +50,7 @@
       class="navbar navbar-expand-lg fixed-top"
       data-bs-theme="dark"
     >
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img
             src="assets/images/apple-touch-icon.png"
@@ -94,14 +95,14 @@
 
     <!-- About Section -->
 
-    <section id="about" class="container my-5">
+    <section id="about" class="container-fluid my-5">
       <h2 class="mb-4">ABOUT</h2>
       <p class="text-muted mb-5">
         Find the most loved spots by locals and tourists alike.
       </p>
 
       <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4 about-card">
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-map-location-dot"></i>
@@ -114,7 +115,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4 about-card">
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-utensils"></i>
@@ -127,7 +128,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4 about-card">
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-heart"></i>
@@ -142,7 +143,7 @@
       </div>
     </section>
 
-    <section id="restaurants" class="container my-5">
+    <section id="restaurants" class="container-fluid my-5">
       <h2 class="mb-4">RESTAURANTS</h2>
 
       <!-- Filter buttons -->
@@ -181,7 +182,7 @@
 
       <!-- Restaurant cards -->
       <div id="restaurantList" class="row g-3">
-        <div class="col-md-4 restaurant-card" data-category="Restaurant">
+        <div class="col-md-6 col-lg-4 restaurant-card" data-category="Restaurant">
           <div class="card p-3 h-100">
             <h5>Hélène Darroze at The Connaught</h5>
             <p>Restaurant · ⭐ 4.5</p>
@@ -191,7 +192,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 restaurant-card" data-category="Coffee Shop">
+        <div class="col-md-6 col-lg-4 restaurant-card" data-category="Coffee Shop">
           <div class="card p-3 h-100">
             <h5>Drury Covent Garden | Cafe & Brunch</h5>
             <p>Coffee Shop · ⭐ 4.3</p>
@@ -201,7 +202,7 @@
           </div>
         </div>
 
-        <div class="col-md-4 restaurant-card" data-category="Pub">
+        <div class="col-md-6 col-lg-4 restaurant-card" data-category="Pub">
           <div class="card p-3 h-100">
             <h5>Old Shades</h5>
             <p>Pub · ⭐ 4.8</p>
@@ -215,7 +216,7 @@
 
     <!-- Map Section -->
 
-    <section id="map-section" class="container my-5">
+    <section id="map-section" class="container-fluid my-5">
       <div
         id="map"
         style="height: 500px; width: 100%; border: 1px solid #ccc"
