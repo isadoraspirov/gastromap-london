@@ -43,11 +43,16 @@
     const restaurant = window.restaurants[index];
     const marker = window.mapMarkers[index];
 
-    // Center map
+    // Center map 
+
     window.map.setCenter(restaurant.position);
     window.map.setZoom(16);
 
-    // Open info window
+    // Bounce animation
+
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(() => marker.setAnimation(null), 1800);
+    
     new google.maps.InfoWindow({
       content: `<strong>${restaurant.name}</strong>`
     }).open(window.map, marker);
