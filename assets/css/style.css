@@ -80,6 +80,57 @@ main {
   box-shadow: 0 6px 20px rgba(252, 163, 17, 0.4);
 }
 
+/* Restaurants Card */
+
+#restaurants h2 {
+  font-size: 3rem;
+  font-family: var(--primary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+}
+
+#filter-btn {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+#searchInput {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
+}
+
+.restaurant-card {
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(252, 163, 17, 0.4);
+}
+
+.restaurant-card h5 {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  margin-top: 1rem;
+}
+
+.restaurant-card p {
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+}
+
+.restaurant-card .btn {
+  border-radius: 0;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+}
+
 
 
 

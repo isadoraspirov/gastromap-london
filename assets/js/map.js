@@ -21,7 +21,7 @@ window.initMap = function () {
       name: "Drury Covent Garden | Cafe & Brunch",
       category: "Coffee Shop",
       position: { lat: 51.51624, lng: -0.12400 },
-      image: "assets/images/drury-coffee.webp"
+      image: "assets/images/drury.webp"
     },
     {
       name: "Old Shades",

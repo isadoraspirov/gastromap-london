@@ -148,26 +148,26 @@
 
       <!-- Filter buttons -->
 
-      <div class="d-flex flex-wrap gap-2 mb-3">
+      <div id="filter-btn" class="d-flex flex-wrap gap-2 mb-3">
         <button
-          class="btn btn-outline-dark filter-btn active"
+          class="btn btn-outline-secondary filter-btn active"
           data-filter="all"
         >
           All
         </button>
         <button
-          class="btn btn-outline-dark filter-btn"
+          class="btn btn-outline-secondary filter-btn"
           data-filter="Restaurant"
         >
           Restaurant
         </button>
         <button
-          class="btn btn-outline-dark filter-btn"
+          class="btn btn-outline-secondary filter-btn"
           data-filter="Coffee Shop"
         >
           Coffee Shop
         </button>
-        <button class="btn btn-outline-dark filter-btn" data-filter="Pub">
+        <button class="btn btn-outline-secondary filter-btn" data-filter="Pub">
           Pub
         </button>
 
@@ -181,9 +181,11 @@
       </div>
 
       <!-- Restaurant cards -->
+
       <div id="restaurantList" class="row g-3">
         <div class="col-md-6 col-lg-4 restaurant-card" data-category="Restaurant">
           <div class="card p-3 h-100">
+            <img src="assets/images/helene-darroze.webp" class="card-img-top" alt="French restaurant">
             <h5>Hélène Darroze at The Connaught</h5>
             <p>Restaurant · ⭐ 4.5</p>
             <button class="btn btn-light view-map-btn" data-index="0">
@@ -194,6 +196,7 @@
 
         <div class="col-md-6 col-lg-4 restaurant-card" data-category="Coffee Shop">
           <div class="card p-3 h-100">
+            <img src="assets/images/drury.webp" class="card-img-top" alt="Coffee Shop">
             <h5>Drury Covent Garden | Cafe & Brunch</h5>
             <p>Coffee Shop · ⭐ 4.3</p>
             <button class="btn btn-light view-map-btn" data-index="1">
@@ -204,6 +207,7 @@
 
         <div class="col-md-6 col-lg-4 restaurant-card" data-category="Pub">
           <div class="card p-3 h-100">
+            <img src="assets/images/oldshades-pub.webp" class="card-img-top" alt="Pub">
             <h5>Old Shades</h5>
             <p>Pub · ⭐ 4.8</p>
             <button class="btn btn-light view-map-btn" data-index="2">
