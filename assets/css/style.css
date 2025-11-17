@@ -202,12 +202,42 @@ html, body {
   font-family: var(--secondary-font);
   color: var(--color-primary);
   padding: 2rem;
-  margin-bottom: 2rem;
 }
 
 #suggest-form .form-select {
   font-family: var(--secondary-font);
   font-size: 1.2rem;
+}
+
+/* Footer */
+
+#footer {
+  background-color: var(--color-primary);
+  font-family: var(--secondary-font);
+}
+
+#footer .footer-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-left: 6px;
+}
+
+#footer .footer-link:hover {
+  text-decoration: underline;
+  color: var(--color-highlight);
+}
+
+/* Social media icons */
+
+#footer .social-icons .social-link {
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  margin: 0 .4rem;
+  transition: .3s;
+}
+
+#footer .social-icons .social-link:hover {
+  color: var(--color-highlight);
 }
 
 
