@@ -273,6 +273,56 @@
       ></div>
     </section>
 
+    <!-- Form -->
+
+    <section id="suggest-form" class="container my-5">
+      <h2 class="mb-4">Suggest a Restaurant</h2>
+
+      <form id="restaurantForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="resName" class="form-label">Restaurant Name</label>
+          <input type="text" class="form-control" id="resName" required />
+        </div>
+
+        <div class="col-md-6">
+          <label for="resRating" class="form-label">Rating (0-5)</label>
+          <input
+            type="number"
+            class="form-control"
+            id="resRating"
+            min="0"
+            max="5"
+            required
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label for="resCategory" class="form-label">Category</label>
+          <select class="form-select" id="resCategory" required>
+            <option value="">Choose...</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="Coffee Shop">Coffee Shop</option>
+            <option value="Pub">Pub</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <label for="resMap" class="form-label">On Map?</label>
+          <select class="form-select" id="resMap" required>
+            <option value="">Choose...</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-sm custom-button-filled mt-4">
+          Submit
+        </button>
+      </form>
+
+      <div id="suggestList" class="mt-4"></div>
+    </section>
+
     <!-- Bootstrap JS -->
 
     <script
