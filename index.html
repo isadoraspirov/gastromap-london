@@ -76,7 +76,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Restaurants</a>
+              <a class="nav-link" href="#restaurants">Restaurants</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#suggest-form">Suggest</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -134,7 +137,7 @@
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-map-location-dot"></i>
-              <h5 class="card-title">Discover</h5>
+              <h3 class="card-title">Discover</h3>
               <p class="card-text">
                 Explore London’s hidden gems and most popular restaurants in one
                 interactive map.
@@ -147,7 +150,7 @@
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-utensils"></i>
-              <h5 class="card-title">Taste</h5>
+              <h3 class="card-title">Taste</h3>
               <p class="card-text">
                 From cozy cafés to fine dining, find authentic cuisine and the
                 best-rated dishes.
@@ -160,7 +163,7 @@
           <div class="card p-4 h-100 shadow-sm">
             <div class="card-body">
               <i class="fa-solid fa-heart"></i>
-              <h5 class="card-title">Enjoy</h5>
+              <h3 class="card-title">Enjoy</h3>
               <p class="card-text">
                 Save your favourites, share your experiences, and fall in love
                 with London’s food scene.
@@ -275,15 +278,13 @@
 
     <!-- Form -->
 
-    <section id="suggest-form" class="container my-5">
-      <h2 class="mb-4">Suggest a Restaurant</h2>
-
-      <form id="restaurantForm" class="row g-3">
+    <section id="suggest-form" class="container-fluid my-5">
+      <h4 class="mb-4">SUGGEST A RESTAURANT</h4>
+      <form id="restaurant-form" class="row g-3">
         <div class="col-md-6">
           <label for="resName" class="form-label">Restaurant Name</label>
           <input type="text" class="form-control" id="resName" required />
         </div>
-
         <div class="col-md-6">
           <label for="resRating" class="form-label">Rating (0-5)</label>
           <input
@@ -295,7 +296,6 @@
             required
           />
         </div>
-
         <div class="col-md-6">
           <label for="resCategory" class="form-label">Category</label>
           <select class="form-select" id="resCategory" required>
@@ -305,7 +305,6 @@
             <option value="Pub">Pub</option>
           </select>
         </div>
-
         <div class="col-md-6">
           <label for="resMap" class="form-label">On Map?</label>
           <select class="form-select" id="resMap" required>
@@ -314,14 +313,50 @@
             <option value="No">No</option>
           </select>
         </div>
-
-        <button type="submit" class="btn btn-sm custom-button-filled mt-4">
-          Submit
-        </button>
+        <div class="mt-3 text-start">
+          <button type="submit" class="btn btn-sm custom-button-filled px-4">
+            Submit
+          </button>
+        </div>
       </form>
-
       <div id="suggestList" class="mt-4"></div>
     </section>
+
+    <footer id="footer" class="text-white mt-auto py-4">
+      <div class="container text-center">
+        <h5 class="mb-3">GastroMap London</h5>
+
+        <p class="mb-2">
+          Discover the flavours of London — one bite at a time.
+        </p>
+
+        <p class="mb-3">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="contact@gastromap.com" class="footer-link"
+            >contact@gastromapldn.com</a
+          >
+        </p>
+
+        <div class="social-icons mb-3">
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" class="social-link"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+        </div>
+
+        <p class="small mb-0">
+          © <span id="year"></span> GastroMap London · All rights reserved.
+        </p>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
 

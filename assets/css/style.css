@@ -119,7 +119,7 @@ html, body {
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.about-card h5 {
+.about-card h3 {
   font-size: 2rem;
   font-family: var(--secondary-font);
   color: var(--color-primary)
@@ -140,7 +140,7 @@ html, body {
 /* Restaurants Card */
 
 #restaurants h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: var(--primary-font);
   color: var(--color-primary);
   padding: 2rem;
@@ -167,7 +167,7 @@ html, body {
   box-shadow: 0 6px 20px rgba(252, 163, 17, 0.4);
 }
 
-.restaurant-card h5 {
+.restaurant-card h3 {
   font-size: 1.5rem;
   font-family: var(--secondary-font);
   color: var(--color-primary);
@@ -186,6 +186,28 @@ html, body {
   font-size: 1.2rem;
   font-family: var(--secondary-font);
   color: var(--color-primary);
+}
+
+/* Suggest Form */
+
+#suggest-form h4 {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+}
+
+#restaurant-form {
+  font-size: 1.2rem;
+  font-family: var(--secondary-font);
+  color: var(--color-primary);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#suggest-form .form-select {
+  font-family: var(--secondary-font);
+  font-size: 1.2rem;
 }
 
 
