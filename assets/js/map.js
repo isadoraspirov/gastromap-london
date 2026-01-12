@@ -29,6 +29,24 @@ window.initMap = function () {
       position: { lat: 51.50660, lng: -0.12698 },
       image: "assets/images/oldshades-pub.webp"
     },
+    {
+      name: "SMOKESTAK",
+      category: "Steakhouse",
+      position: { lat: 51.52378 , lng: -0.07288 },
+      image: "assets/images/SMOKESTAK.webp"
+    },
+    {
+      name: "Sky Pod Bar",
+      category: "Pub",
+      position: { lat: 51.51203 , lng: -0.08331 },
+      image: "assets/images/skypodbar.webp"
+    },
+    {
+      name: "Savoy Grill",
+      category: "Restaurant",
+      position: { lat: 51.51078, lng: -0.12058 },
+      image: "assets/images/skypodbar.webp"
+    },
   ];
 
   // Markers saved globally
