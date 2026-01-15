@@ -64,65 +64,48 @@ document.querySelectorAll('.view-map-btn').forEach(btn => {
 
 // Restaurant Suggestion Form
 
+// Load existing suggestions from localStorage
 
-let suggestedRestaurants = []; // array to store submissions
+let suggestedRestaurants =
+  JSON.parse(localStorage.getItem("suggestedRestaurants")) || [];
 
-document.getElementById("restaurantForm").addEventListener("submit", function (event) {
-  event.preventDefault();
+const form = document.getElementById("restaurantForm");
 
-  // Variables collecting form values
+if (form) {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const name = document.getElementById("resName").value;           // string
-  const rating = Number(document.getElementById("resRating").value); // number
-  const category = document.getElementById("resCategory").value;   // string
-  const onMapValue = document.getElementById("resMap").value;      // "yes" or "no"
+    const name = document.getElementById("resName").value.trim();
+    const rating = Number(document.getElementById("resRating").value);
+    const category = document.getElementById("resCategory").value;
+    const mapped = document.getElementById("resMap").value;
 
-  // Convert string to final value stored in object
+    // Validation
+    if (name.length < 3) {
+      alert("Name is too short!");
+      return;
+    }
 
-  const onMap = onMapValue === "yes" ? "Yes" : "No";
+    if (rating < 0 || rating > 5) {
+      alert("Rating must be between 0 and 5.");
+      return;
+    }
 
-  // Validation using if/else
+    const newRestaurant = {
+      name,
+      rating,
+      category,
+      mapped
+    };
 
-  if (name.length < 3) {
-    alert("Name is too short!");
-    return;
-  }
+    suggestedRestaurants.push(newRestaurant);
 
-  if (rating < 0 || rating > 5) {
-    alert("Rating must be between 0 and 5.");
-    return;
-  }
+    localStorage.setItem(
+      "suggestedRestaurants",
+      JSON.stringify(suggestedRestaurants)
+    );
 
-  // Create restaurant object
-
-  const newRestaurant = {
-    name: name,
-    rating: rating,
-    category: category,
-    mapped: onMap
-  };
-
-  suggestedRestaurants.push(newRestaurant); // Save to array
-  displaySuggestions(); // update UI
-  this.reset(); // clear form
-});
-
-// Function to render list
-
-function displaySuggestions() {
-  const listContainer = document.getElementById("suggestList");
-  listContainer.innerHTML = "<h4>Submitted Suggestions:</h4>";
-
-  // Loop through submitted restaurants
-  
-  for (let i = 0; i < suggestedRestaurants.length; i++) {
-    const item = suggestedRestaurants[i];
-    listContainer.innerHTML += `
-      <div class="card p-3 my-2 shadow-sm">
-        <strong>${item.name}</strong> <br>
-        Category: ${item.category} <br>
-        Rating: ⭐ ${item.rating} <br>
-        On Map: ${item.mapped}
-      </div>`;
-  }
+    // Redirect to confirmation page
+    window.location.href = "submit.html";
+  });
 }

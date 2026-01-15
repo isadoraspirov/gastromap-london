@@ -298,7 +298,10 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4 restaurant-card" data-category="Restaurant">
+        <div
+          class="col-md-6 col-lg-4 restaurant-card"
+          data-category="Restaurant"
+        >
           <div class="card p-3 h-100">
             <img
               src="assets/images/savoygrill.webp"
@@ -312,7 +315,6 @@
             </button>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -329,7 +331,7 @@
 
     <section id="suggest-form" class="container-fluid my-5">
       <h4 class="mb-4">SUGGEST A RESTAURANT</h4>
-      <form id="restaurant-form" class="row g-3">
+      <form id="restaurantForm" class="row g-3">
         <div class="col-md-6">
           <label for="resName" class="form-label">Restaurant Name</label>
           <input type="text" class="form-control" id="resName" required />
@@ -465,5 +467,10 @@
 
     <!-- Map initialization -->
     <script src="assets/js/map.js"></script>
+
+    <!-- YEAR -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
