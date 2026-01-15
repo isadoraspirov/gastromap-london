@@ -39,7 +39,7 @@ The strategy focuses on creating a visually engaging and intuitive website that 
 - Homepage with a hero section and “Explore Now” button.
 - Restaurant/Attraction listing page with filter and search functionality.
 - Interactive Google Map integration using API.
-- Contact page with JavaScript form validation.
+- Suggest form with JavaScript form validation.
 - Responsive design (mobile-first approach).
 
 **Nice to Have**
@@ -55,9 +55,9 @@ The website structure guides users from curiosity to exploration:
 
 ### 1. Homepage:
 
-- Hero image of London with a call to action (“Discover the best spots to eat and visit in London”).
-- Overview of the project and categories (Food, Coffee, Attractions).
-- “Explore Now” button linking to the restaurants page.
+- Hero image of London.
+- Overview of the project and categories (Restaurants, Coffee, Pub).
+- “Explore Restaurants” button linking to the restaurants page.
 
 ### 2. Restaurants page:
 
@@ -66,11 +66,10 @@ The website structure guides users from curiosity to exploration:
 - Dynamically generated restaurant cards with images, names, ratings, and short descriptions.
 - Google Map displaying markers for each restaurant.
 
-### 3. Contact Page:
+### 3. Suggest Restaurant Form:
 
-- Simple form for user messages and suggestions.
-- JavaScript form validation with feedback alerts.
-- Optional embedded map or city photo background.
+- Simple form for user suggest.
+- JavaScript form validation with Restaurants suggested.
 
 ### 4. Footer:
 
@@ -82,7 +81,7 @@ The website structure guides users from curiosity to exploration:
 
 - Sticky top navigation bar with:
 
-Home | Restaurants | Attractions | Contact
+Home | Restaurants | Suggest | Contact
 
 **Page Hierarchy:**
 
