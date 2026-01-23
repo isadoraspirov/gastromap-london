@@ -1,5 +1,7 @@
 # Isadora Nascimento 
 
+![Mockup](assets/images/mockup.webp)
+
 ## Explore the Gastronomy in London
 
 Explore the Gastronomy in London is a concept website project designed to highlight key front-end development skills such as HTML, CSS, and JavaScript integration. The website aims to provide users with an interactive and informative platform to discover the best restaurants and attractions across London.
