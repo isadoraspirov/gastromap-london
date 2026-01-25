@@ -35,6 +35,9 @@ searchInput.addEventListener('keyup', () => {
 });
 
 // --- VIEW ON MAP ---
+
+const IMAGE_BASE_PATH = "assets/images/";
+
 document.querySelectorAll('.view-map-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const index = btn.dataset.index;
@@ -53,7 +56,7 @@ document.querySelectorAll('.view-map-btn').forEach(btn => {
     new google.maps.InfoWindow({
       content: `
         <div style="max-width:200px">
-          <img src="${restaurant.image}" style="width:100%; border-radius:6px; margin-bottom:6px;">
+          <img src="${IMAGE_BASE_PATH}${restaurant.image}" style="width:100%; border-radius:6px; margin-bottom:6px;">
           <strong>${restaurant.name}</strong><br>
           <small>${restaurant.category}</small>
         </div>
@@ -109,3 +112,37 @@ if (form) {
     window.location.href = "submit.html";
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // --- NAVBAR SMOOTH SCROLL + COLLAPSE ---
+  document
+    .querySelectorAll(".navbar-collapse .nav-link")
+    .forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const targetId = e.target.getAttribute("href");
+        const section = document.querySelector(targetId);
+
+        if (section) {
+          e.preventDefault();
+
+          const navbarHeight =
+            document.querySelector(".navbar-toggler")?.offsetHeight || 0;
+
+          window.scroll({
+            top: section.offsetTop - navbarHeight,
+            behavior: "smooth",
+          });
+
+          document
+            .querySelector(".navbar-collapse")
+            .classList.remove("show");
+        }
+      });
+    });
+
+  // --- YEAR ---
+  const yearEl = document.getElementById("year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+});

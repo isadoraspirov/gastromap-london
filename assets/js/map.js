@@ -15,37 +15,37 @@ window.initMap = function () {
       name: "Hélène Darroze at The Connaught",
       category: "Restaurant",
       position: { lat: 51.51029, lng: -0.14975 },
-      image: "assets/images/helene-darroze.webp"
+      image: "helene-darroze.webp"
     },
     {
       name: "Drury Covent Garden | Cafe & Brunch",
       category: "Coffee Shop",
       position: { lat: 51.51624, lng: -0.12400 },
-      image: "assets/images/drury.webp"
+      image: "drury.webp"
     },
     {
       name: "Old Shades",
       category: "Pub",
       position: { lat: 51.50660, lng: -0.12698 },
-      image: "assets/images/oldshades-pub.webp"
+      image: "oldshades-pub.webp"
     },
     {
       name: "SMOKESTAK",
       category: "Steakhouse",
       position: { lat: 51.52378 , lng: -0.07288 },
-      image: "assets/images/SMOKESTAK.webp"
+      image: "SMOKESTAK.webp"
     },
     {
       name: "Sky Pod Bar",
       category: "Pub",
       position: { lat: 51.51203 , lng: -0.08331 },
-      image: "assets/images/skypodbar.webp"
+      image: "skypodbar.webp"
     },
     {
       name: "Savoy Grill",
       category: "Restaurant",
       position: { lat: 51.51078, lng: -0.12058 },
-      image: "assets/images/skypodbar.webp"
+      image: "savoygrill.webp"
     },
   ];
 
