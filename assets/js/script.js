@@ -44,9 +44,27 @@ document.querySelectorAll('.view-map-btn').forEach(btn => {
     const restaurant = window.restaurants[index];
     const marker = window.mapMarkers[index];
 
+    // Scroll to map section
+    const mapSection = document.getElementById("map-section");
+    if (mapSection) {
+      mapSection.scrollIntoView({ behavior: "smooth" });
+    }
+
     // Center map
     window.map.setCenter(restaurant.position);
     window.map.setZoom(16);
+
+    // Reset all markers first
+    window.mapMarkers.forEach(m => {
+      m.setAnimation(null);
+      m.setIcon(null); // reset to default icon
+    });
+
+    // Highlight selected marker
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+
+    setTimeout(() => marker.setAnimation(null), 1800);
 
     // Bounce animation
     marker.setAnimation(google.maps.Animation.BOUNCE);
