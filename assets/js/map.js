@@ -1,6 +1,5 @@
 window.map = null;
 window.mapMarkers = [];
-window.restaurants = restaurants;
 
 window.initMap = function () {
   window.map = new google.maps.Map(document.getElementById("map"), {
@@ -56,6 +55,7 @@ window.initMap = function () {
       map: window.map,
       position: place.position,
       title: place.name,
+      icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
     });
 
     const infoWindow = new google.maps.InfoWindow({
@@ -63,9 +63,20 @@ window.initMap = function () {
     });
 
     marker.addListener("click", () => {
+      window.mapMarkers.forEach(m => {
+      if (m) {
+        m.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+        m.setAnimation(null);
+      }
+    });
+
+    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+    setTimeout(() => marker.setAnimation(null), 1800);
+    
       infoWindow.open(window.map, marker);
     });
 
-    return marker; // store it in the array
+    return marker; 
   });
 };
