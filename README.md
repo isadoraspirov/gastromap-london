@@ -142,3 +142,27 @@ As a London resident, I want to send suggestions or corrections through a contac
 
 ## Features 
 
+**Navigation Bar**
+
+- Smooth Navigation with navbar fixed-top and anchor-links to key section. Quick section to Restaurants, Suggest Form, and Contac sections.
+
+**Hero & Information Sections**
+
+- Hero section with call-to-action to explore restaurants.
+- About section explaining the purpose and benefits of the platform.
+
+**Interactive Google Maps**
+
+- Integrated Google Maps API to display restaurant locations across London. "Viwe on Map" buttons link restaurants cards directly to their map markers and visual map container for easy exploration of venues by location.
+
+**Filter & Search functionality**
+
+- Category filter buttons (All, Restaurant, Coffee Shop, Pub).
+- Live text search to quickly find restaurants by name.
+- Combined filtering and searching for better user experience.
+
+**Restaurant Listing**
+
+- Responsive restaurant cards with images, names, categories, and star ratings.
+- Clean, card-based layout for easy browsing.
+
