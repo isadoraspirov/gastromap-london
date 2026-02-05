@@ -1,6 +1,18 @@
 window.map = null;
 window.mapMarkers = [];
 
+/*
+ * Initializes the Google Map and restaurant markers.
+ * This function:
+ * - Creates the map centered on London
+ * - Loads restaurant data globally
+ * - Generates map markers for each restaurant
+ * - Attaches click events to markers
+ *
+ * NOTE: This function is required to be global
+ * and is called automatically by the Google Maps API.
+ */
+
 window.initMap = function () {
   window.map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 51.511, lng: -0.13 },
@@ -62,6 +74,14 @@ window.initMap = function () {
       content: `<strong>${place.name}</strong><br>${place.category}`,
     });
 
+    /*
+ * Handles marker click events.
+ * This function:
+ * - Resets all markers to their default appearance
+ * - Highlights the selected marker with animation
+ * - Displays an information window with restaurant details
+ */
+
     marker.addListener("click", () => {
       window.mapMarkers.forEach(m => {
       if (m) {
@@ -73,7 +93,7 @@ window.initMap = function () {
     marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(() => marker.setAnimation(null), 1800);
-    
+
       infoWindow.open(window.map, marker);
     });
 

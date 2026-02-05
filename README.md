@@ -1,10 +1,12 @@
-# Isadora Nascimento 
+# Isadora Nascimento
+
+## Mockup
 
 ![Mockup](assets/images/mockup.webp)
 
-## Explore the Gastronomy in London
+## Discover the Flavours of London
 
-Explore the Gastronomy in London is a concept website project designed to highlight key front-end development skills such as HTML, CSS, and JavaScript integration. The website aims to provide users with an interactive and informative platform to discover the best restaurants and attractions across London.
+Discover the Flabours of London is a concept website project designed to highlight key front-end development skills such as HTML, CSS, and JavaScript integration. The website aims to provide users with an interactive and informative platform to discover the best restaurants and attractions across London.
 
 It focuses on usability, responsive design, and dynamic content generation, allowing users to explore categories, view locations on an interactive map, and connect through a contact form.
 The project is educational and portfolio-based, not linked to a real business or tourism organization.
@@ -137,3 +139,6 @@ As a London resident, I want to send suggestions or corrections through a contac
 - JavaScript validation checks that all fields are filled and email is valid.
 - Success message appears when form is submitted correctly.
 - Optional embedded map or London image displayed on the contact page.
+
+## Features 
+

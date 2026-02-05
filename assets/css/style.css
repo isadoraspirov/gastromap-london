@@ -20,6 +20,7 @@ html, body {
   overflow-x: hidden;
 }
 
+
 /* Navbar */
 
 #navbar {
@@ -35,7 +36,6 @@ html, body {
 #hero {
   background-color: var(--color-primary);
   min-height: 600px;
-  margin-top: 70px;
 }
 
 /* Hero text styling */
