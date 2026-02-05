@@ -134,7 +134,8 @@ html, body {
 
 /* Restaurants Card */
 
-#restaurants h2 {
+#restaurants h2, 
+#map-section h2 {
   font-size: 2rem;
   font-family: var(--primary-font);
   color: var(--color-primary);
