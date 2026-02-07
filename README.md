@@ -65,10 +65,10 @@ The website structure guides users from curiosity to exploration:
 
 ### 2. Restaurants page:
 
+- Google Map displaying markers for each restaurant.
 - Filter bar.
 - Search bar.
 - Dynamically generated restaurant cards with images, names, ratings, and short descriptions.
-- Google Map displaying markers for each restaurant.
 
 ### 3. Suggest Restaurant Form:
 
@@ -89,15 +89,36 @@ Home | Restaurants | Suggest | Contact
 
 **Page Hierarchy:**
 
-- Homepage: Introduction, categories, CTA.
+- Homepage: Introduction, CTA.
+- About: Website's proposal and interactive cards.
 - Restaurants: Interactive list + Google Map.
-- Contact: Form.
+- Form: Suggestion restaurants form.
+- Contact: Social media and email address.
 
 **Interaction:**
 
 - Filters and search powered by JavaScript.
 - Map updates dynamically when users click “View on Map.”
 - Smooth scrolling and hover effects for better engagement.
+
+## Skeleton
+
+**Priority Content:**
+
+- High Priority (Top-level navigation + hero section):
+
+1. Explore Restaurants CTA.
+2. Google Map.
+2. Interactive restaurants cards with filter and search bar.
+
+- Medium Priority
+
+1. Suggest a restaurant form.
+
+- Low Priority
+
+1. Footer: contact, social links and privacy policy.
+
 
 ## User Stories
 
@@ -146,14 +167,21 @@ As a London resident, I want to send suggestions or corrections through a contac
 
 - Smooth Navigation with navbar fixed-top and anchor-links to key section. Quick section to Restaurants, Suggest Form, and Contac sections.
 
+![Navbar](assets/images/navbar.webp)
+
 **Hero & Information Sections**
 
 - Hero section with call-to-action to explore restaurants.
 - About section explaining the purpose and benefits of the platform.
 
+![Hero](assets/images/hero.webp)
+![About](assets/images/aboutsection.webp)
+
 **Interactive Google Maps**
 
 - Integrated Google Maps API to display restaurant locations across London. "Viwe on Map" buttons link restaurants cards directly to their map markers and visual map container for easy exploration of venues by location.
+
+![Map](assets/images/map.webp)
 
 **Filter & Search functionality**
 
@@ -166,3 +194,20 @@ As a London resident, I want to send suggestions or corrections through a contac
 - Responsive restaurant cards with images, names, categories, and star ratings.
 - Clean, card-based layout for easy browsing.
 
+![Restaurant Card 1](assets/images/restaurantscard.webp)
+![Restaurant Card 2](assets/images/restaurantcard2.webp)
+
+**Suggest a Restaurant Form**
+
+- User submission form to suggest new venues.
+- Captures restaurant name, rating, category, and map availability.
+- Dynamic display of submitted suggestions.
+
+![Suggest Form](assets/images/suggestform.webp)
+![Submit Form](assets/images/submitform.webp)
+
+**Social & Contact Integration**
+
+- Footer with contact email and social media icons.
+
+![Footer](assets/images/footer.webp)
