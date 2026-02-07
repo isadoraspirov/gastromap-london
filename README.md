@@ -211,3 +211,29 @@ As a London resident, I want to send suggestions or corrections through a contac
 - Footer with contact email and social media icons.
 
 ![Footer](assets/images/footer.webp)
+
+## Tecnologies Used
+
+## Manual Testing
+
+## User Stories Testing
+
+## Automated Testing with Lighthouse
+
+## HTML, CSS and JShint validation
+
+## Functionality
+
+![Functionality](assets/images/functionality.webp)
+
+**Browser Compatibility**
+
+Verified that the website works correctly on Chrome, Firefox, and Edge/Safari.
+
+**Responsiveness**
+
+Tested the application on a wide range of screen sizes, from very small devices.
+
+## Deployment
+
+
