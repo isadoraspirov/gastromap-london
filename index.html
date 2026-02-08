@@ -43,8 +43,7 @@
     <nav
       id="navbar"
       class="navbar navbar-expand-lg fixed-top"
-      data-bs-theme="dark"
-    >
+      data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img
@@ -59,16 +58,13 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#restaurants">Restaurants</a>
@@ -89,6 +85,7 @@
     <section id="hero" class="d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
+
           <!-- Left text content -->
 
           <div class="col-lg-6 text-white hero-text">
@@ -174,8 +171,8 @@
       
       <div
         id="map"
-        style="height: 500px; width: 100%; border: 1px solid #ccc"
-      ></div>
+        style="height: 500px; width: 100%; border: 1px solid #ccc">
+      </div>
     </section>
 
      <!-- Restaurant Section -->
@@ -188,20 +185,17 @@
       <div id="filter-btn" class="d-flex flex-wrap gap-2 mb-3">
         <button
           class="btn btn-outline-secondary filter-btn active"
-          data-filter="all"
-        >
+          data-filter="all">
           All
         </button>
         <button
           class="btn btn-outline-secondary filter-btn"
-          data-filter="Restaurant"
-        >
+          data-filter="Restaurant">
           Restaurant
         </button>
         <button
           class="btn btn-outline-secondary filter-btn"
-          data-filter="Coffee Shop"
-        >
+          data-filter="Coffee Shop">
           Coffee Shop
         </button>
         <button class="btn btn-outline-secondary filter-btn" data-filter="Pub">
@@ -298,8 +292,7 @@
 
         <div
           class="col-md-6 col-lg-4 restaurant-card"
-          data-category="Restaurant"
-        >
+          data-category="Restaurant">
           <div class="card p-3 h-100">
             <img
               src="assets/images/savoygrill.webp"
@@ -337,21 +330,23 @@
             </label>
         </div>
         <div class="col-md-6">
-          <label for="resCategory" class="form-label">Category</label>
+          <label for="resCategory" class="form-label">Category
           <select class="form-select" id="resCategory" required>
             <option value="">Choose...</option>
             <option value="Restaurant">Restaurant</option>
             <option value="Coffee Shop">Coffee Shop</option>
             <option value="Pub">Pub</option>
           </select>
+          </label>
         </div>
         <div class="col-md-6">
-          <label for="resMap" class="form-label">On Map?</label>
+          <label for="resMap" class="form-label">On Map?
           <select class="form-select" id="resMap" required>
             <option value="">Choose...</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>
+          </label>
         </div>
         <div class="mt-3 text-start">
           <button type="submit" class="btn btn-sm custom-button-filled px-4">
@@ -417,11 +412,14 @@
     <!-- JS (filters, search, view on map handlers) -->
     <script src="assets/js/script.js"></script>
 
+
     <!-- Google Maps SDK -->
+     
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3oMfwzLnORwJF2aSrwo9ZteOO1OMcEo&callback=initMap&v=beta"
-      async
-    ></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3oMfwzLnORwJF2aSrwo9ZteOO1OMcEo&callback=initMap&v=weekly&libraries=places"
+    async
+    defer>
+  </script>
 
     <!-- Map initialization -->
     <script src="assets/js/map.js"></script>
