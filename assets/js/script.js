@@ -97,7 +97,7 @@ document.querySelectorAll('.view-map-btn').forEach(btn => {
 
     // Highlight selected marker
   
-    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+    marker.setIcon("https://maps.google.com/mapfiles/ms/icons/green-dot.png");
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(() => marker.setAnimation(null), 1800);
 
