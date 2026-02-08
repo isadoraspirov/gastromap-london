@@ -214,13 +214,86 @@ As a London resident, I want to send suggestions or corrections through a contac
 
 ## Tecnologies Used
 
+- HTML5
+- CSS3 (Custom CSS + CSS Variables)
+- Bootstrap 5.3
+- JavaScript (ES11)
+- Google Maps JavaScript API
+- Font Awesome Icons
+- Google Fonts
+
 ## Manual Testing
+
+The website was manually tested across different browsers and screen sizes to ensure functionality, responsiveness, and usability.
+
+**Navigation**
+
+- Navbar links scroll to correct sections
+- Mobile navbar collapses after link click
+- Logo redirects to Home
+
+**Restaurant Filters & Search**
+
+- Filter buttons correctly show/hide restaurants
+- Active filter state updates correctly
+- Search input filters restaurants by name
+- Search clears active filter highlighting
+
+**Google Maps**
+
+- Map loads correctly on page load
+- "View on Map" buttons: 
+1. Scroll to map section
+2. Center map on correct restaurant
+3. Animate and highlight correct marker
+4. Open info window with correct image and details
+
+**Suggest a Restaurant Form**
+
+- Form prevents empty submissions
+- Name length validation works
+- Rating range validation (0–5) works
+- Data is saved to localStorage
+- User is redirected to confirmation page
+
+**Responsive Design**
+
+- Tested on:
+1. Desktop (Chrome, Edge)
+2. Tablet view (DevTools)
+3. Mobile view (DevTools)
+- Layout adjusts correctly
+- Cards and map resize appropriately
 
 ## User Stories Testing
 
+**User Story 1 — The Curious Tourist**
+
+- Verified restaurant cards render from the JavaScript restaurants array.
+- Confirmed images and descriptions display correctly on desktop and mobile.
+- Tested “Explore Now” button navigation.
+
+**User Story 2 — The Food Lover**
+
+- Clicked each filter button and confirmed only matching cards are shown.
+- Typed into the search bar and confirmed live filtering by name.
+- Clicked “View on Map” and verified map centers and marker animates
+
+**User Story 3 — The Local Sharer**
+
+- Submitted form with empty fields and confirmed validation errors.
+- Submitted form with valid data and confirmed success message.
+- Verified optional map/image loads on the contact page
+
 ## Automated Testing with Lighthouse
 
+![HTML](assets/images/validationlighthouse.png)
+
 ## HTML, CSS and JShint validation
+
+![HTML](assets/images/validationhtml.png)
+![CSS](assets/images/validationcss.png)
+![JShint](assets/images/jshintvalidation.png)
 
 ## Functionality
 
@@ -234,6 +307,83 @@ Verified that the website works correctly on Chrome, Firefox, and Edge/Safari.
 
 Tested the application on a wide range of screen sizes, from very small devices.
 
+## Known Issues
+
+- Third-party cookie warnings from Google Maps in browser dev tools (expected and not project errors).
+- API key exposure in development (should be restricted in production).
+
 ## Deployment
+
+This project is hosted on GitHub Pages, a free service that publishes websites directly from a GitHub repository.
+
+**Steps to deploy:**
+
+1. Open the repository for this project on GitHub.
+2. Click the Settings tab at the top of the page.
+3. From the left-hand menu, under Code and automation, select Pages.
+    In the Build and deployment section:
+    Source → Deploy from a branch
+    Branch → main
+    Folder → / (root)
+4. Click Save.
+5. Return to the Code tab and wait a few minutes while GitHub builds and publishes the site.
+6. Once the process is complete, go to the Environments section on the right-hand side of the repository page.
+7. Click github-pages, then select View deployment to open the live site.
+
+### Getting the Code onto Your Computer (Cloning and Forking)
+
+To make updates or changes to the website, you need a copy of the code on your computer. There are two main ways to do this: **Cloning** and **Forking**.
+
+#### Cloning
+
+- Cloning means you make a direct copy of the project’s repository to your computer.  
+- When you clone, your copy is linked to the original repository.  
+- Any changes you make and push will be sent to the original repository for approval.  
+- This method is best if you are directly involved with the project and want to contribute changes that will be merged into the original code.
+
+**How to clone the repository:**
+
+1. On the GitHub project page, click the green **Code** button.  
+2. Copy the URL (`https://github.com/isadoraspirov/private-chef`).  
+3. Open your computer’s terminal or command prompt.  
+4. Type:  
+   ```bash
+   git clone https://isadoraspirov.github.io/gastromap-london/
+5. Press Enter. This downloads the project files to your computer.
+
+#### Forking
+
+- Forking means you create your own copy of the repository under your GitHub account.
+- Your fork is independent, so you can make changes without affecting the original project.
+- If the original project changes, GitHub will notify you, and you can update your fork with those changes if you want.
+- This is ideal if you want to customize the project or work on it independently.
+
+**How to fork the repository:**
+
+- On the GitHub project page, click the Fork button at the top right.
+- This creates a copy under your GitHub account.
+- Follow the cloning steps above but use the URL of your forked repository.
+
+### Making Changes and Updating GitHub
+
+After cloning or forking and cloning, follow these steps to make changes and update the repository:
+
+1. Open the project folder on your computer.  
+2. Make the changes you want using your code editor.  
+3. Save the files.  
+4. Open your terminal/command prompt and navigate to the project folder.  
+5. Run:  
+   ```bash
+   git add .
+   git commit -m "Describe your changes here"
+   git push
+
+### Automatic Deployment
+
+Any changes pushed to the **main** branch on GitHub will automatically update the live website. This means once you push your changes, GitHub Pages will rebuild and republish the site without needing any extra steps.
+
+### Acknowledgements
+
+Thanks to my mentor, Brian Macharia for the guidance, feedback, and support that helped me complete this project.
 
 
