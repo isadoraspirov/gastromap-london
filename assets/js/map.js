@@ -85,12 +85,12 @@ window.initMap = function () {
     marker.addListener("click", () => {
       window.mapMarkers.forEach(m => {
       if (m) {
-        m.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png");
+        m.setIcon("https://maps.google.com/mapfiles/ms/icons/red-dot.png");
         m.setAnimation(null);
       }
     });
 
-    marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png");
+    marker.setIcon("https://maps.google.com/mapfiles/ms/icons/green-dot.png");
     marker.setAnimation(google.maps.Animation.BOUNCE);
     setTimeout(() => marker.setAnimation(null), 1800);
 
