@@ -1,3 +1,6 @@
+/* jshint esversion: 11 */
+/* global google */
+
 // --- FILTER BUTTONS ---
 const filterButtons = document.querySelectorAll('.filter-btn');
 const restaurantCards = document.querySelectorAll('.restaurant-card');
@@ -6,14 +9,12 @@ const searchInput = document.getElementById('searchInput');
 // Loop through each filter button 
 filterButtons.forEach(button => {
 
- /*
- * Handles category filtering when a filter button is clicked.
- * This function:
+ /*  Handles category filtering when a filter button is clicked.
+ * This function =
  * - Updates the active state of filter buttons
  * - Reads the selected category from data attributes
  * - Shows or hides restaurant cards based on the selected category
- * - Clears the search input when a filter is applied
- */
+ * - Clears the search input when a filter is applied */
 
   button.addEventListener('click', () => {
     // Update active button
@@ -34,19 +35,17 @@ filterButtons.forEach(button => {
 
 // --- SEARCH ---
 
-/*
- * Filters restaurant cards based on user search input.
+/* Filters restaurant cards based on user search input.
  * This function runs every time the user types in the search field.
  * It compares the input value with restaurant names and updates
- * the displayed cards accordingly.
- */
+ * the displayed cards accordingly */
 searchInput.addEventListener('keyup', () => {
   const query = searchInput.value.toLowerCase();
 
   // Loop through restaurant cards 
   restaurantCards.forEach(card => {
-    // Get restaurant name from <h5>
-    const name = card.querySelector('h5').textContent.toLowerCase();
+    // Get restaurant name from <h3>
+    const name = card.querySelector('h3').textContent.toLowerCase();
     const visible = name.includes(query);
     card.style.display = visible ? 'block' : 'none';
   });
@@ -59,14 +58,13 @@ searchInput.addEventListener('keyup', () => {
 const IMAGE_BASE_PATH = "assets/images/";
 
 document.querySelectorAll('.view-map-btn').forEach(btn => {
-  /*
- * Centers the Google Map on the selected restaurant.
- * This function:
+ 
+/* Centers the Google Map on the selected restaurant.
+ * This function =
  * - Scrolls smoothly to the map section
  * - Centers and zooms the map on the selected location
  * - Resets all markers to default state
- * - Highlights the selected marker and displays an info window
- */
+ * - Highlights the selected marker and displays an info window */
   btn.addEventListener('click', () => {
     const index = btn.dataset.index;
     const restaurant = window.restaurants[index];
@@ -125,14 +123,12 @@ const form = document.getElementById("restaurantForm");
 
 if (form) {
 
-  /*
- * Handles restaurant suggestion form submission.
- * This function:
+  /* Handles restaurant suggestion form submission.
+ * This function =
  * - Prevents the default form submission behavior
  * - Validates user input
  * - Stores the submitted data in localStorage
- * - Redirects the user to a confirmation page
- */
+ * - Redirects the user to a confirmation page */
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -172,13 +168,11 @@ if (form) {
   });
 }
 
-/*
- * Executes once the DOM content has fully loaded.
- * This function:
+/* Executes once the DOM content has fully loaded.
+ * This function =
  * - Enables smooth scrolling for navigation links
  * - Collapses the mobile navigation menu after selection
- * - Updates the footer year dynamically
- */
+ * - Updates the footer year dynamically */
 
 document.addEventListener("DOMContentLoaded", function () {
   // --- NAVBAR SMOOTH SCROLL + COLLAPSE ---

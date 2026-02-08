@@ -1,10 +1,8 @@
-# Isadora Nascimento
+# Discover the Flavours of London
 
 ## Mockup
 
 ![Mockup](assets/images/mockup.webp)
-
-## Discover the Flavours of London
 
 Discover the Flabours of London is a concept website project designed to highlight key front-end development skills such as HTML, CSS, and JavaScript integration. The website aims to provide users with an interactive and informative platform to discover the best restaurants and attractions across London.
 
@@ -105,7 +103,7 @@ Home | Restaurants | Suggest | Contact
 
 **Priority Content:**
 
-- High Priority (Top-level navigation + hero section):
+- High Priority:
 
 1. Explore Restaurants CTA.
 2. Google Map.
